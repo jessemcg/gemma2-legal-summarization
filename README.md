@@ -42,7 +42,7 @@ Note: This four-quant version is not the absolute best, but it fits comfortably 
 
 Make sure scripts are executible
 
-    chmod +x $HOME/gemma2-legal-summarization.git/*
+    chmod +x $HOME/gemma2-legal-summarization/*
 
 ## Prepare Text Files
 
@@ -54,7 +54,7 @@ Make sure scripts are executible
 
 Preliminarily, you may need to clear the GPU memory because you will need most of the 24 gigs of vram. The way I do it is by logging out and then back in. The CLI commands are very similar. First CD to the project directory:
 
-    cd $HOME/gemma2-legal-summarization.git
+    cd $HOME/gemma2-legal-summarization
     
 Then execute the desired script with the -f flag followed by the desired text file and -s flag following by the desired variable for the csplit command. For example, to summarize the reporter's transcript:
 
