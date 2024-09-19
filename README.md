@@ -65,3 +65,5 @@ Note: Often, the same words will appear on the same line as the date for a new h
 Here is an example for the clerk's transcript:
 
     ./sumCTscript.sh -f raw_ct.txt -s "next-section"
+    
+As shown above, if the input text file is located in the project directory, you can just list the file name. However, if the input text file is located elsewhere, you will need to list the entire file path.
