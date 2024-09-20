@@ -113,11 +113,11 @@ sed -i -E 's/[“"]([^“”"]*)[”"]/**\1**/g' "$SUMMARY"
 md-to-pdf --pdf-options '{"format":"Letter","margin":"18mm 36mm 18mm 36mm"}' --stylesheet "$markdown_css" "$SUMMARY"
 
 # copy completed markdown file to project directory
-cp "$SUMMARY" "$PROJ_HOME/"
+cp "$SUMMARY" "$PROJ_HOME"
 
 # copy pdf version to project directory
 cd "$TEMP_ENV" 
-cp RTsummary.pdf "$PROJ_HOME/"
+cp RTsummary.pdf "$PROJ_HOME"
 
 # stop Gemma-2 27b
 pkill -f gemma
