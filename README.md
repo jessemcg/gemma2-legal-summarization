@@ -6,8 +6,7 @@ A key feature is the liberal use of direct quotes, allowing for easy searches in
 [sample_summary.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)
 This is a summary of three hearings from Trump's recent hush money trial. The original transcripts were about 500 pages.
 
-<a href="[username.github.io/folder/document.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)" target="_blank">PDF.</a>
-
+<object data="[../assets/path/to/document.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)" width="1000" height="1000" type='application/pdf'></object>
 
 ## Set up Dependencies
 
