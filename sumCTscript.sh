@@ -49,7 +49,7 @@ sleep 5
 TEMP_ENV="/dev/shm/SummarizeCT"
 RAW_TEXT="${TEMP_ENV}/raw_text.txt"
 SUMMARY="${TEMP_ENV}/CTsummary.md"
-PROJ_HOME="/home/jesse/Dropbox/CODE/gemma2-legal-summarization"
+PROJ_HOME="$HOME/gemma2-legal-summarization"
 markdown_css="$PROJ_HOME/markdown.css"
 
 # create temp environment
@@ -127,5 +127,4 @@ cp CTsummary.pdf "$PROJ_HOME/"
 
 # stop Gemma-2 27b
 pkill -f gemma
-send-notify "CT Summary Complete"
 exit

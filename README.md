@@ -1,5 +1,5 @@
 # gemma2-legal-summarization
-Bash scripts for summarizing legal transcripts locally with [Gemma-2](https://ai.google.dev/gemma/docs). There are two: one for the reporter's transcript, and one of the clerk's transcript. They can be run with simple CLI commands in the terminal. Benefits of local inference are consistency and the fact that sensitive data stays on your computer. This requires a Cuda enabled Nvidia GPU, RTX 3090 or 4090.
+Bash scripts for summarizing legal transcripts locally with [Gemma-2](https://ai.google.dev/gemma/docs). There are two: one for the reporter's transcript, and one of the clerk's transcript. They can be run with simple CLI commands in the terminal. Benefits of local inference are consistency and the fact that sensitive data stays on your computer. This requires a Cuda enabled Nvidia GPU, RTX 3090 or 4090 with 24 gigs of VRAM. If you do not have that much VRAM, you can use the smaller Gemma-2 9b model, which also works well.
 
 A key feature is the liberal use of direct quotes, allowing for easy searches in the source PDF to locate page numbers and surrounding context. Direct quotes appear in bold in the resulting pdf. I have found that Gemma-2 can follow instructions to mix in direct quotes quite well, but only if the context window is relatively small. Accordingly, each paragraph of summary represents 400 lines of the reporter's transcript or 200 lines of the clerk's transcript. The Linux csplit command is used to delineate the start of a hearing or report. All temporary files are stored in memory at: `/dev/shm` Go there to inspect or debug.
 
@@ -64,6 +64,6 @@ Note: Often, the same words will appear on the same line as the date for a new h
 
 Here is an example for the clerk's transcript:
 
-    ./sumCTscript.sh -f raw_ct.txt -s "next-section"
+    ./sumCTscript.sh -f raw_ct.txt -s next-section
     
 As shown above, if the input text file is located in the project directory, you can just list the file name. However, if the input text file is located elsewhere, you will need to list the entire file path.

@@ -46,7 +46,7 @@ sleep 5
 TEMP_ENV="/dev/shm/SummarizeRT"
 RAW_TEXT="${TEMP_ENV}/raw_text.txt"
 SUMMARY="${TEMP_ENV}/RTsummary.md"
-PROJ_HOME="/home/jesse/Dropbox/CODE/gemma2-legal-summarization"
+PROJ_HOME="$HOME/gemma2-legal-summarization"
 markdown_css="$PROJ_HOME/markdown.css"
 
 # create temp environment
@@ -121,8 +121,4 @@ cp RTsummary.pdf "$PROJ_HOME/"
 
 # stop Gemma-2 27b
 pkill -f gemma
-send-notify "RT Summary Complete"
-
 exit
-
-# ./your_script_name.sh -f <input_file> -s <csplit_variable>
