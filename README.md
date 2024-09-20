@@ -6,6 +6,9 @@ A key feature is the liberal use of direct quotes, allowing for easy searches in
 [sample_summary.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)
 This is a summary of three hearings from Trump's recent hush money trial. The original transcripts were about 500 pages.
 
+<a href="[username.github.io/folder/document.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)" target="_blank">PDF.</a>
+
+
 ## Set up Dependencies
 
 ### Nvida Driver and Cuda Toolkit
