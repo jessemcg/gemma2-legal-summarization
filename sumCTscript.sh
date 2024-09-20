@@ -104,9 +104,9 @@ for dir in */; do
 done
 
 # optional text processing on summary file
-sed -i 's/**//g' "$SUMMARY"																# delete any bold markup
-sed 's/[“”"]\{2\}/"/g' "$SUMMARY"														# replace two quote marks with one
-sed -i 's/<end_of_turn>//g' "$SUMMARY"													# needed for Gemma-2 model
+sed -i 's/**//g' "$SUMMARY"					# delete any bold markup
+sed 's/[“”"]\{2\}/"/g' "$SUMMARY"			# replace two quote marks with one
+sed -i 's/<end_of_turn>//g' "$SUMMARY"		# needed for Gemma-2 model
 sed -i -E 's/([A-Z][a-z]{2,8} [0-9]{1,2}[a-zA-Z]{0,2}, [0-9]{4})/**\1**/g' "$SUMMARY"		# highlight dates
 
 # delete repetitive sentences created by Gemma-2 at the start of each paragraph
