@@ -42,7 +42,7 @@ split="$csplit_var"
 
 # start gemma-2 27b server
 cd $HOME/llama.cpp
-./llama-server -m models/gemma-2-27b-it-Q4_K_L.gguf -ngl 999 --port 8081 &
+./llama-server -m models/Gemma-2-Ataraxy-9B-Q6_K.gguf -ngl 999 --port 8081 &
 sleep 5
 
 # other variables

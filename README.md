@@ -1,7 +1,7 @@
 # gemma2-legal-summarization
-Bash scripts for summarizing legal transcripts locally with [Gemma-2](https://ai.google.dev/gemma/docs). There are two: one for the reporter's transcript, and one of the clerk's transcript. They can be run with simple CLI commands in the terminal. Benefits of local inference are consistency and the fact that sensitive data stays on your computer. This requires a Cuda enabled Nvidia GPU, RTX 3090 or 4090 with 24 gigs of VRAM. If you do not have that much VRAM, you can use the smaller Gemma-2 9b model, which also works well.
+Bash scripts for summarizing legal transcripts locally with a variation of [Gemma-2](https://ai.google.dev/gemma/docs). There are two scripts: one for the reporter's transcript, and one of the clerk's transcript. They can be run with simple CLI commands in the terminal. Benefits of local inference are consistency and the ability to keep sensitive data on your computer. This requires a Cuda enabled Nvidia GPU with about 12 gigs of VRAM or more.
 
-A key feature is the liberal use of direct quotes, allowing for easy searches in the source PDF to locate page numbers and surrounding context. Direct quotes appear in bold in the resulting pdf. I have found that Gemma-2 can follow instructions to mix in direct quotes quite well, but only if the context window is relatively small. Accordingly, each paragraph of summary represents 400 lines of the reporter's transcript or 200 lines of the clerk's transcript. The Linux csplit command is used to delineate the start of a hearing or report. All temporary files are stored in memory at: `/dev/shm` Go there to inspect or debug.
+A key feature is the liberal use of direct quotes, allowing for easy searches in the source PDF to locate page numbers and surrounding context. Direct quotes appear in bold in the resulting pdf. I have found that Gemma-2 models can follow instructions to mix in direct quotes quite well, but only if the context window is relatively small. Therefore, each paragraph of summary represents 400 lines of the reporter's transcript or 200 lines of the clerk's transcript. The Linux csplit command is used to delineate the start of a hearing or report. All temporary files are stored in memory at: `/dev/shm` Go there to inspect or debug.
 
 Here is a summary of three hearings from Trump's recent hush money trial. The original transcripts were about 500 pages.
  [sample_summary.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)
@@ -23,17 +23,15 @@ Then compile:
 
 Note: You can add the gguf formatted model later 
 
-### Download Gemma-2 GGUF Model
+### Download Gemma-2 Ataraxy GGUF Model
 
-Download the Gemma-2 27b GGUF model [here](https://huggingface.co/bartowski/gemma-2-27b-it-GGUF). You want this one:
+My new favorite model is [Gemma-2-Ataraxy-9b-GGUF](https://huggingface.co/bartowski/Gemma-2-Ataraxy-9B-GGUF). It was created by merging two fine tuned gemma-2 models, one based on a dataset of high quality writing. For summarization, this seems to work better than the regular Gemma-2 27b, with way less resources needed. I recommend this 6-quant version:
 
-    gemma-2-27b-it-Q4_K_L.gguf
+    Gemma-2-Ataraxy-9B-Q6_K.gguf
     
 Save it to this directory:
 
     $HOME/llama.cpp/models
-    
-Note: This four-quant version is not the absolute best, but it fits comfortably on a 3090 or 4090 GPU and is still very good.
 
 ### md-to-pdf
 
