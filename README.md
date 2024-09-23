@@ -7,7 +7,7 @@ Here is a summary of two days from the 1951 Rosenburg trial. [Rosenburg_sample.p
  
 ## Set up Dependencies
 
-### Nvida Driver and Cuda Toolkit
+### Nvidia Driver and Cuda Toolkit
 You will need both the Nvidia driver and the Cuda toolkit installed. If you are on Fedora Linux, you can avoid a lot of headache by using Fedora 39 (not 40) because it is sure to work with the driver and has the older GCC compiler that the Cuda toolkit requires. In addition, only install the Nvidia driver from the [Fusion Nonfree Repository](https://rpmfusion.org/Howto/NVIDIA). The Cuda toolkit can be installed from the Nvidia servers. See [Fedora Cuda Instructions](https://rpmfusion.org/Howto/CUDA).
 
 ### Set up llama.cpp 
