@@ -127,4 +127,5 @@ cp CTsummary.pdf "$PROJ_HOME"
 
 # stop Gemma-2 27b
 pkill -f gemma
+pkill -f Gemma
 exit
