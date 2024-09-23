@@ -52,11 +52,11 @@ Make sure scripts are executible
 
 ## CLI Commands
 
-Preliminarily, you may need to clear the GPU memory because you will need most of the 24 gigs of vram. The way I do it is by logging out and then back in. The CLI commands are very similar. First CD to the project directory:
+Preliminarily, you may need to clear the GPU memory. The way I do it is by logging out and then back in. The CLI commands are very similar. First CD to the project directory:
 
     cd $HOME/gemma2-legal-summarization
     
-Then execute the desired script with the -f flag followed by the desired text file and -s flag following by the desired variable for the csplit command. For example, to summarize the reporter's transcript:
+Then execute the desired script with the -f flag followed by the desired text file and -s flag following by the desired variable for the csplit command. Place in double quotes if there are spaces. For example, to summarize the reporter's transcript:
 
     ./sumRTscript.sh -f raw_rt.txt -s "ORANGE, CALIFORNIA"
     
@@ -66,4 +66,4 @@ Here is an example for the clerk's transcript:
 
     ./sumCTscript.sh -f raw_ct.txt -s next-section
     
-As shown above, if the input text file is located in the project directory, you can just list the file name. However, if the input text file is located elsewhere, you will need to list the entire file path.
+As shown above, if the input text file is located in the project directory, you can just list the file name. If the input text file is located elsewhere, you will need to list the entire file path.
