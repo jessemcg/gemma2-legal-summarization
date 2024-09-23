@@ -3,8 +3,7 @@ Bash scripts for summarizing legal transcripts locally with a variation of [Gemm
 
 A key feature is the liberal use of direct quotes, allowing for easy searches in the source PDF to locate page numbers and surrounding context. Direct quotes appear in bold in the resulting pdf. I have found that Gemma-2 models can follow instructions to mix in direct quotes quite well, but only if the context window is relatively small. Therefore, each paragraph of summary represents 400 lines of the reporter's transcript or 200 lines of the clerk's transcript. The Linux csplit command is used to delineate the start of a hearing or report. All temporary files are stored in memory at: `/dev/shm` Go there to inspect or debug.
 
-Here is a summary of three hearings from Trump's recent hush money trial. The original transcripts were about 500 pages.
- [sample_summary.pdf](https://github.com/user-attachments/files/17075180/sample_summary.pdf)
+Here is a summary of days from the 1951 Rosenburg trial.
  
 ## Set up Dependencies
 
